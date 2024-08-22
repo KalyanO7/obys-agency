@@ -7,6 +7,10 @@
 
 }
 
+body {
+    overflow-x: hidden;
+}
+
 html,
 body {
     height: 100%;
@@ -211,11 +215,11 @@ body {
     justify-content: center;
 }
 
-#video-cursor i{
+#video-cursor i {
     font-size: 2.5vw;
 }
 
-#page3{
+#page3 {
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -225,4 +229,70 @@ body {
     min-height: 100vh;
     width: 100%;
     position: relative;
+    padding-top: 5vh;
+}
+
+#page4-content {
+    width: 70vw;
+    margin-left: 28%;
+    position: relative;
+}
+
+#page4-content h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+
+#page4-content .underline {
+    height: 0.25vh;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+
+#page4-content>p {
+    font-size: 1.7vw;
+    width: 50%;
+    margin-bottom: 5vw;
+}
+
+#page4-img {
+    display: flex;
+}
+
+#page4-img img {
+    width: 50%;
+}
+
+#page4-img p {
+    font-size: 1vw;
+    width: 18%;
+    margin-left: 1vw;
+}
+
+#page4-blue {
+    background-color: #3f7df4;
+    width: 35vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -18vw;
+    margin-left: 20vw;
+}
+
+.blue-elem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5vw 0;
+    border-bottom: 0.2vw solid #ffffffa2;
+}
+
+.blue-elem h4 {
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+.blue-elem p {
+    width: 40%;
+    font-size: 1vw;
 }
