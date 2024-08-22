@@ -38,16 +38,25 @@ function loadingAnimation() {
     time.from("#page1", {
         y: 1200,
         opacity: 0,
-        delay: 0.2
+        // delay: 0.2
     })
     time.to("#loader", {
         display: "none"
+    })
+    time.from("#nav", {
+        opacity: 0,
+    })
+
+    time.from(".hero h1, #effect h2", {
+        y: 150,
+        stagger: 0.2,
+        duration: 0.5,
     })
 }
 
 loadingAnimation()
 
-function cursorAnimation(){
+function cursorAnimation() {
 
     document.addEventListener("mousemove", function (dets) {
         gsap.to("#cursor", {
