@@ -140,7 +140,7 @@ body {
     width: 72%;
     margin-left: 28%;
     height: fit-content;
-    overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
 }
@@ -149,6 +149,17 @@ body {
     font-size: 6vw;
     line-height: 6vw;
     text-transform: uppercase;
+    position: relative;
+}
+
+#no1::before {
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: 22%;
+    top: 28%;
 }
 
 .hero h2 {
@@ -242,6 +253,17 @@ body {
     font-size: 7vw;
     text-transform: uppercase;
 }
+
+#page4-content h1::before {
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: -8%;
+    top: 1%;
+}
+
 
 #page4-content .underline {
     height: 0.25vh;
@@ -364,4 +386,62 @@ body {
     font-weight: 400;
     color: transparent;
     font-family: "silk serif";
+}
+
+#footer {
+    height: 100vh;
+    width: 100%;
+    padding-left: 28vw;
+}
+
+#footer h1 {
+    font-size: 7vw;
+    margin-bottom: 8vh;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#footer h1::before {
+    content: "04";
+    position:absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: -9%;
+    top: 8%;
+}
+
+#footer .underline {
+    height: 0.25vw;
+    width: 100%;
+    background-color: white;
+}
+
+#footer-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 7vw;
+    padding-top: 3vw;
+    padding-bottom: 5vw;
+}
+
+#footer-div h6 {
+    font-size: 1vw;
+    margin-bottom: 2vw;
+}
+
+#footer-div h5 {
+    font-size: 1.75vw;
+    font-weight: 500;
+}
+
+#footer-div .box {
+    width: 20%;
+}
+
+#trademark {
+    font-size: 1.25vw;
+    font-weight: 500;
+    margin-top: 5vh;
 }
