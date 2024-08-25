@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obys Agency</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="style.css">
@@ -30,7 +31,7 @@
         </div>
     </div>
     <div id="main">
-        <div id="page1">
+        <div id="page1" data-scroll >
             <div id="nav">
                 <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
                     <path
@@ -84,7 +85,7 @@
                 <h1>Experience</h1>
             </div>
         </div>
-        <div id="page2">
+        <div id="page2" data-scroll data-scroll-speed="-1.5">
             <div id="container">
                 <div id="video-cursor">
                     <i class="ri-play-fill"></i>
@@ -94,8 +95,35 @@
                     loop="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"></video>
             </div>
         </div>
-        <div id="page3"></div>
-        <div id="page4">
+        <div id="page3" data-scroll>
+            <h1>our projects</h1>
+            <div class="underline"></div>
+            <div id="image-div-container">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1571028634586-ae87c1a42432?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <img src="https://images.unsplash.com/photo-1496670013738-4f730477bfdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1571028634586-ae87c1a42432?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1496670013738-4f730477bfdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1571028634586-ae87c1a42432?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1496670013738-4f730477bfdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1571028634586-ae87c1a42432?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1496670013738-4f730477bfdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div id="page4" data-scroll>
             <div id="page4-content">
                 <h1>about Obys</h1>
                 <div class="underline"></div>
@@ -179,7 +207,7 @@
                 <div class="underline"></div>
             </div>
         </div>
-        <div id="page5">
+        <div id="page5" data-scroll>
             <div class="elem">
                 <h1>Sports - <span>technology</span> - fashion - </h1>
                 <h1>Sports - <span>technology</span> - fashion - </h1>
@@ -197,7 +225,7 @@
                 <h1>hotel - <span>music</span> - Automotive - </h1>
             </div>
         </div>
-        <div id="footer">
+        <div id="footer" data-scroll>
             <h1>let's create</h1>
             <div class="underline"></div>
             <div id="footer-div">
@@ -226,13 +254,19 @@
             <h5 id="trademark">Obys Agency ©️ 2024</h5>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+        <!-- Three.js is needed for 3d Effects -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+        
+        <!-- ControlKit is needed for Debug Panel -->
+        <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
     <script src="app.js"></script>
 </body>
 
