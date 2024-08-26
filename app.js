@@ -97,14 +97,43 @@ function loadingAnimation() {
 
 function cursorAnimation() {
 
-    document.addEventListener("mousemove", function (dets) {
-        gsap.to("#cursor", {
-            left: dets.x,
-            top: dets.y
-        })
-    })
+    Shery.mouseFollower({
+        skew: true,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+    });
 
     Shery.makeMagnet("#nav-part2 h4");
+    document.querySelector("#container").addEventListener("mouseenter", function () {
+        document.querySelector("#container").addEventListener("mousemove", function (dets) {
+            gsap.to(".mousefollower", {
+                opacity: 0,
+            })
+            gsap.to("#video-cursor", {
+                left: dets.x - 470,
+                top: dets.y - 200,
+            });
+        });
+    });
+    document.querySelector("#container").addEventListener("mouseleave", function () {
+        gsap.to(".mousefollower", {
+            opacity: 1
+
+        });
+        gsap.to("#video-cursor", {
+            top: "-10%",
+            left: "80%",
+        });
+    });
+
+    document.querySelector("#container").addEventListener("click", function () {
+        document.querySelector("#container video").play();
+        document.querySelector("#container video").style.opacity = 1;
+        document.querySelector("#video-cursor").style.innerHTML =`<h1>aaaaaa</h1>`;
+        gsap.to("#video-cursor", {
+            scale: 0.5
+        })
+    })
 }
 
 
@@ -118,6 +147,6 @@ function shreyAnimation() {
 
 
 loadingAnimation();
-// cursorAnimation();
+cursorAnimation();
 locomotive();
 shreyAnimation();

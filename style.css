@@ -17,7 +17,7 @@ body {
     width: 100%;
 }
 
-#cursor {
+/* #cursor {
     height: 3vw;
     width: 3vw;
     border-radius: 50%;
@@ -26,6 +26,13 @@ body {
     z-index: 999;
     mix-blend-mode: difference;
     transform: translate(-50%, -50%);
+} */
+
+.mousefollower {
+    border: 2px solid #fff;
+    background-color: rgb(255, 255, 255);
+    scale: 2;
+    mix-blend-mode: difference;
 }
 
 #loader {
@@ -195,7 +202,9 @@ body {
     width: 70vw;
     position: relative;
     left: 28%;
-    /* background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg); */
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 #container img {
@@ -210,6 +219,7 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    opacity: 0;
 }
 
 #video-cursor {
@@ -224,6 +234,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
 
 #video-cursor i {
@@ -264,31 +275,145 @@ body {
     margin-left: 28vw;
 }
 
-.img-container{
-height: 33vw;
-width: 24vw;
-position: relative;
-overflow: hidden;
+.img-container {
+    height: 35vw;
+    width: 27vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 1vw;
 }
 
-.img-container img{
+.img-container:nth-child(1) {
+    height: 29vw;
+    width: 22vw;
+}
+
+
+.img-container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    flex-shrink: 0;
+
 }
 
 
-#image-div-container{
+#image-div-container {
     padding: 1vw;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
+.page3-circle1 {
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 27vh;
+    margin-left: 15vw;
+    position: relative;
+}
+
+.page3-circle1 svg {
+    height: 35%;
+}
+
+.page3-circle2 {
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.page3-circle2 svg {
+    height: 35%;
+    rotate: -45deg;
+}
+
+.circle-in1 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    scale: 0;
+    transition: all ease 0.3s;
+}
+
+.page3-circle1:hover .circle-in1 {
+    scale: 1;
+}
+
+.page3-circle1:hover .circle-in1 p {
+    scale: 1;
+    opacity: 1;
+}
+
+
+.circle-in1 p {
+    font-size: 1vw;
+    color: black;
+    width: 70%;
+    font-weight: 500;
+    scale: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
+
+.circle-in2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    scale: 0;
+    transition: all ease 0.3s;
+}
+
+.page3-circle2:hover .circle-in2 {
+    scale: 1;
+}
+
+.page3-circle2:hover p {
+    scale: 1;
+    opacity: 1;
+}
+
+
+.circle-in2 p {
+    font-size: 1vw;
+    color: black;
+    width: 70%;
+    font-weight: 500;
+    scale: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
 
 #page4 {
     min-height: 100vh;
@@ -457,7 +582,7 @@ overflow: hidden;
 
 #footer h1::before {
     content: "04";
-    position:absolute;
+    position: absolute;
     font-size: 3vw;
     font-family: "silk serif";
     font-weight: 100;
@@ -500,7 +625,7 @@ overflow: hidden;
     margin-top: 5vh;
 }
 
-._canvas_container{
+._canvas_container {
     z-index: 999999999999999999999 !important;
     pointer-events: none;
 }
